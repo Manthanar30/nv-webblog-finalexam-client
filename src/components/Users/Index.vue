@@ -4,16 +4,12 @@
     <div>จํานวนผู้ใช้งาน {{ users.length }}</div>
     <div v-for="user in users" v-bind:key="user.id">
       <div>id: {{ user.id }}</div>
-      <div>ชืEอ-นามสกุล: {{ user.name }} - {{ user.lastname }}</div>
+      <div>ชื่อ-นามสกุล: {{ user.name }} - {{ user.lastname }}</div>
       <div>email: {{ user.email }}</div>
       <div>password: {{ user.password }}</div>
       <p>
-        <button v-on:click="navigateTo('/user/' + user.id)">
-          ดูข้อมูลผู้ใช้
-        </button>
-        <button v-on:click="navigateTo('/user/edit/' + user.id)">
-          แกไขข้อมูล
-        </button>
+        <button v-on:click="navigateTo('/user/' + user.id)"> ดูข้อมูลผู้ใช้</button>
+        <button v-on:click="navigateTo('/user/edit/' + user.id)"> แก้ไขข้อมูล </button>
         <button v-on:click="deleteUser(user)">ลบข้อมูล</button>
       </p>
       <hr />
